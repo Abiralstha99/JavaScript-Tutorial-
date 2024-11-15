@@ -79,3 +79,38 @@ delete product.newProperty;
 ## 9. Nested Objects
 - Objects can contain other objects, allowing for more complex data structures. 
 ```javascript
+const product2 = {
+  name: "shirt",
+  rating: {
+    stars: 4.5,
+    count: 87
+  }
+};
+```
+
+## 10. Functions Inside Objects (Methods)
+- Functions can be stored as values in objects, making them methods of that object.
+- Syntax: functionName: function() { ... }
+```javascript
+const product2 = {
+  func: function() {
+    console.log("function inside object");
+  }
+};
+```
+
+## 11. Built in JavaScript Objects
+## JSON
+- JSON : Provides methods to convert objects to JSON strings and vice versa.
+  - JSON.stringify(object) converts an object to a JSON string (functions are omitted).
+  - JSON.parse(string) converts a JSON string back to an object.
+
+## Local Storage
+localStorage is a built-in JavaScript object that allows you to store data persistently in the browser, even if the user refreshes the page or closes the browser.
+
+## Functions Used in localStorage
+- setItem(key, value): Stores data. The value must be a string, so objects are typically converted to JSON using JSON.stringify.
+- getItem(key): Retrieves data by key.
+- removeItem(key): Removes data associated with a key.
+- clear(): Clears all localStorage data for that domain.
+
