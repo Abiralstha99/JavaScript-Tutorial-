@@ -68,6 +68,14 @@ console.log(JsUser.greetingTwo());    // Outputs: "Hello JS user, Sambridi" and 
 - When calling a method, using parentheses `()` executes the function.
 - If the function doesn't explicitly return a value, it returns `undefined` after execution.
 
-## 7. Summary
-- Object literals allow you to create and manage structured data.
-- You can define properties and methods, access them in multiple ways, and modify them.
+## 8. Adding and Removing Properties
+- Adding: You can add properties dynamically to an object using dot or bracket notation.
+- Deleting: Properties can be removed using the delete keyword.
+```javascript
+product.newProperty = true;
+delete product.newProperty;
+```
+
+## 9. Nested Objects
+- Objects can contain other objects, allowing for more complex data structures. 
+```javascript
