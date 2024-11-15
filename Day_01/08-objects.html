@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      //Creating an object
+      const product = {
+        name: "socks",
+        price: 1090,
+      };
+
+      //  console.log(product);
+
+      //  product.newProperty = true;
+      //  console.log(product);
+
+      //  delete product.newProperty;
+      //  console.log(product)
+
+      const product2 = {
+        name: "shirt",
+        ["delivery-time"]: "1 day", // if we only have string values inside the bracket, the brackets are optional
+
+        //nested object
+        rating: {
+          starts: 4.5,
+          count: 87,
+        },
+
+        //storing a function in a object
+        // function are just another type of value
+        // function inside object = method 
+       
+        func: function function1() {
+          console.log("function inside object");
+        },
+      }; 
+
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2["name"]);
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.count);
+      product2.func();
+       // console.log is an object as well 
+        // console = object ; log = function stored in the object console
+
+        console.log(typeof console)
+      //Two more built in objects
+      // 1. JSON 2.Local Storage
+
+       /*
+       output :
+       {"name":"shirt","delivery-time":"1 day","rating":{"starts":4.5,"count":87}} - converts the entire object to string 
+       It didn't print function cause JSON doesn't support function
+       */
+       console.log(JSON.stringify(product2)); 
+       const jsonString = JSON.stringify(product2);
+
+       //converts JSON --> JavaScript Object 
+       console.log(JSON.parse(jsonString));
+
+       //2. Local Storage 
+       
+
+    </script>
+  </body>
+</html>
