@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let product1 = {
+        name: "basketball",
+        price: 2095,
+      };
+
+      console.log(product1);
+
+      product1.price += 500;
+      console.log(product1);
+
+      product1["delivery-time"] = "3 days";
+      console.log(product1);
+
+      let product2 = {
+        name: "cricket bat",
+        price: 5000,
+      };
+
+      function comparePrice(product1, product2) {
+        return (product1.price > product2.price ? product2 : product1);
+      }
+      console.log(comparePrice(product1,product2));
+      
+
+    </script>
+  </body>
+</html>
