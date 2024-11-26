@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+    <script>
+        // Can get any element from the page and put it inside javascript 'Html elements = Javascript objects'
+        console.log(document.querySelector('button')
+            .innerHTML); 
+        console.log(document.querySelector('button')
+            .innerHTML = 'Changed'); 
+
+        const buttonElement = document.querySelector('.js-button') // if we start with . , it will look for a class with that name
+        console.log(buttonElement);
+
+        /*
+        // This html element is converted to javascript object
+        console.log(document.title);
+        document.title = 'Changed'
+        console.log(document.body)
+        console.log(typeof document.body) // Output = object
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good Job</button>'; // This will remove all the html and replace with this 
+        console.log(document.body.innerHTML);
+        */
+                
+
+        /*
+        This is just like object. Document has body and innerHTML
+        document.body.innerHTML = 'hello';
+        document.title = 'Good job !'
+        */
+    </script>
+</body>
+</html>
